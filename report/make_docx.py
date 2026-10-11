@@ -31,7 +31,7 @@ SCREENS = IMG / "screens"
 METRICS = ROOT / "report" / "metrics"
 OUT = ROOT / "report" / "docx" / "Отчёт_ML_предмодерация_объявлений.docx"
 
-REPO_URL = "https://github.com/<ваш-аккаунт>/<имя-репозитория>"
+REPO_URL = "https://github.com/Mapc27/devops-prime-era-1task"
 
 # A4 минус поля: все таблицы и изображения нормируются под эту ширину,
 # иначе на A4 часть таблиц вылезает за полосу набора
