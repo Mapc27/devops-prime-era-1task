@@ -1,0 +1,55 @@
+{
+  "model": "s-nlp/russian_toxicity_classifier",
+  "dataset": "m1_text/data/public_test.csv",
+  "n_samples": 5228,
+  "original_positive_rate": 0.1722,
+  "positive_rate": 0.0499,
+  "roc_auc": 0.9985,
+  "pr_auc": 0.9732,
+  "thresholds": {
+    "review": 0.6287,
+    "reject": 0.949,
+    "target_precision": 0.95,
+    "target_recall": 0.95,
+    "assumed_violation_rate": 0.0499,
+    "observed_violation_rate": 0.0499,
+    "expected_precision_at_rate": 0.9542,
+    "expected_recall_at_rate": 0.8774
+  },
+  "buckets": {
+    "share_allow": 0.9445,
+    "share_review": 0.0098,
+    "share_reject": 0.0457,
+    "automated_share": 0.9902,
+    "precision_reject": 0.954,
+    "recall_reject": 0.8736,
+    "violations_leaked_to_allow": 0.0536,
+    "clean_wrongly_rejected": 0.0022
+  },
+  "performance": {
+    "name": "m1_eval_russian_toxicity_classifier",
+    "device": "cpu",
+    "n_calls": 164,
+    "total_s": 40.862,
+    "latency_ms": {
+      "mean": 248.99,
+      "p50": 220.73,
+      "p95": 470.79,
+      "max": 642.55
+    },
+    "throughput_per_s": 4.01,
+    "memory_mb": {
+      "rss_start": 491.8,
+      "rss_peak": 2491.8,
+      "rss_delta": 2000.0,
+      "gpu_allocated": 0.0
+    },
+    "env": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.14"
+    },
+    "model": "s-nlp/russian_toxicity_classifier",
+    "batch_size": 32
+  }
+}

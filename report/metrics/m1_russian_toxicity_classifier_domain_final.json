@@ -1,0 +1,312 @@
+{
+  "model": "s-nlp/russian_toxicity_classifier",
+  "dataset": "m1_text/data/samples.csv",
+  "n_samples": 200,
+  "original_positive_rate": 0.5,
+  "positive_rate": 0.5,
+  "roc_auc": 0.9433,
+  "pr_auc": 0.9521,
+  "thresholds": {
+    "review": 0.005,
+    "reject": 0.1372,
+    "target_precision": 0.95,
+    "target_recall": 0.85,
+    "assumed_violation_rate": 0.05,
+    "observed_violation_rate": 0.5,
+    "expected_precision_at_rate": 1.0,
+    "expected_recall_at_rate": 0.56
+  },
+  "buckets": {
+    "share_allow": 0.53,
+    "share_review": 0.195,
+    "share_reject": 0.275,
+    "automated_share": 0.805,
+    "precision_reject": 1.0,
+    "recall_reject": 0.55,
+    "violations_leaked_to_allow": 0.15,
+    "clean_wrongly_rejected": 0.0
+  },
+  "performance": {
+    "name": "m1_eval_russian_toxicity_classifier",
+    "device": "cpu",
+    "n_calls": 7,
+    "total_s": 0.881,
+    "latency_ms": {
+      "mean": 125.64,
+      "p50": 136.33,
+      "p95": 154.43,
+      "max": 154.43
+    },
+    "throughput_per_s": 7.95,
+    "memory_mb": {
+      "rss_start": 482.5,
+      "rss_peak": 894.3,
+      "rss_delta": 411.8,
+      "gpu_allocated": 0.0
+    },
+    "env": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.14"
+    },
+    "model": "s-nlp/russian_toxicity_classifier",
+    "batch_size": 32
+  },
+  "recall_sweep": [
+    {
+      "target_recall": 0.95,
+      "thresholds": {
+        "review": 0.0019,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.95,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.35,
+        "share_review": 0.375,
+        "share_reject": 0.275,
+        "automated_share": 0.625,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.04,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.85,
+      "thresholds": {
+        "review": 0.005,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.85,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.53,
+        "share_review": 0.195,
+        "share_reject": 0.275,
+        "automated_share": 0.805,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.15,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.75,
+      "thresholds": {
+        "review": 0.008,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.75,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.595,
+        "share_review": 0.13,
+        "share_reject": 0.275,
+        "automated_share": 0.87,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.23,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.65,
+      "thresholds": {
+        "review": 0.0255,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.65,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.66,
+        "share_review": 0.065,
+        "share_reject": 0.275,
+        "automated_share": 0.935,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.33,
+        "clean_wrongly_rejected": 0.0
+      }
+    }
+  ],
+  "by_kind": {
+    "borderline": {
+      "label": 1,
+      "n": 20,
+      "median_score": 0.0535,
+      "reject": 7,
+      "review": 10,
+      "allow": 3,
+      "share_rejected": 0.35
+    },
+    "contempt": {
+      "label": 1,
+      "n": 25,
+      "median_score": 0.006,
+      "reject": 3,
+      "review": 12,
+      "allow": 10,
+      "share_rejected": 0.12
+    },
+    "firm": {
+      "label": 0,
+      "n": 30,
+      "median_score": 0.0018,
+      "reject": 0,
+      "review": 3,
+      "allow": 27,
+      "share_rejected": 0.0
+    },
+    "insult": {
+      "label": 1,
+      "n": 40,
+      "median_score": 0.9542,
+      "reject": 40,
+      "review": 0,
+      "allow": 0,
+      "share_rejected": 1.0
+    },
+    "negative": {
+      "label": 0,
+      "n": 15,
+      "median_score": 0.0031,
+      "reject": 0,
+      "review": 4,
+      "allow": 11,
+      "share_rejected": 0.0
+    },
+    "plain": {
+      "label": 0,
+      "n": 55,
+      "median_score": 0.0011,
+      "reject": 0,
+      "review": 2,
+      "allow": 53,
+      "share_rejected": 0.0
+    },
+    "threat": {
+      "label": 1,
+      "n": 15,
+      "median_score": 0.0119,
+      "reject": 5,
+      "review": 8,
+      "allow": 2,
+      "share_rejected": 0.3333
+    }
+  },
+  "cv": {
+    "k": 5,
+    "buckets": {
+      "share_allow": 0.535,
+      "share_review": 0.16,
+      "share_reject": 0.305,
+      "automated_share": 0.84,
+      "precision_reject": 0.9672,
+      "recall_reject": 0.59,
+      "violations_leaked_to_allow": 0.17,
+      "clean_wrongly_rejected": 0.02,
+      "precision_reject_at_prior": 0.6082,
+      "prior": 0.05
+    },
+    "by_kind": {
+      "borderline": {
+        "label": 1,
+        "n": 20,
+        "reject": 8,
+        "review": 9,
+        "allow": 3
+      },
+      "contempt": {
+        "label": 1,
+        "n": 25,
+        "reject": 4,
+        "review": 10,
+        "allow": 11
+      },
+      "firm": {
+        "label": 0,
+        "n": 30,
+        "reject": 0,
+        "review": 3,
+        "allow": 27
+      },
+      "insult": {
+        "label": 1,
+        "n": 40,
+        "reject": 40,
+        "review": 0,
+        "allow": 0
+      },
+      "negative": {
+        "label": 0,
+        "n": 15,
+        "reject": 1,
+        "review": 4,
+        "allow": 10
+      },
+      "plain": {
+        "label": 0,
+        "n": 55,
+        "reject": 1,
+        "review": 1,
+        "allow": 53
+      },
+      "threat": {
+        "label": 1,
+        "n": 15,
+        "reject": 7,
+        "review": 5,
+        "allow": 3
+      }
+    },
+    "fold_thresholds": [
+      {
+        "review": 0.0056,
+        "reject": 0.1384
+      },
+      {
+        "review": 0.005,
+        "reject": 0.1372
+      },
+      {
+        "review": 0.0056,
+        "reject": 0.1372
+      },
+      {
+        "review": 0.0036,
+        "reject": 0.0195
+      },
+      {
+        "review": 0.0036,
+        "reject": 0.1372
+      }
+    ],
+    "threshold_range": {
+      "review": [
+        0.0036,
+        0.0056
+      ],
+      "reject": [
+        0.0195,
+        0.1384
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "model": "cointegrated/rubert-tiny-toxicity",
+  "dataset": "m1_text/data/public_test.csv",
+  "n_samples": 6000,
+  "original_positive_rate": 0.1722,
+  "positive_rate": 0.1722,
+  "roc_auc": 0.9973,
+  "pr_auc": 0.9884,
+  "thresholds": {
+    "review": 0.7691,
+    "reject": 0.7691,
+    "target_precision": 0.95,
+    "target_recall": 0.95
+  },
+  "buckets": {
+    "share_allow": 0.8258,
+    "share_review": 0.0,
+    "share_reject": 0.1742,
+    "automated_share": 1.0,
+    "precision_reject": 0.9502,
+    "recall_reject": 0.9613,
+    "violations_leaked_to_allow": 0.0387,
+    "clean_wrongly_rejected": 0.0105
+  },
+  "performance": {
+    "name": "m1_eval_rubert-tiny-toxicity",
+    "device": "cpu",
+    "n_calls": 188,
+    "total_s": 4.921,
+    "latency_ms": {
+      "mean": 26.03,
+      "p50": 21.04,
+      "p95": 59.52,
+      "max": 99.45
+    },
+    "throughput_per_s": 38.2,
+    "memory_mb": {
+      "rss_start": 488.1,
+      "rss_peak": 1009.5,
+      "rss_delta": 521.4,
+      "gpu_allocated": 0.0
+    },
+    "env": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.14"
+    },
+    "model": "cointegrated/rubert-tiny-toxicity",
+    "batch_size": 32
+  }
+}

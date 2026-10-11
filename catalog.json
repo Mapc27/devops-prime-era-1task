@@ -1,0 +1,137 @@
+{
+  "_comment": "Единый справочник категорий площадки — общий для M2 (фото) и M4 (видео). Раньше у модулей были свои отдельные списки, которые противоречили друг другу.",
+  "_fields": {
+    "clip_prompts": "англоязычные описания для zero-shot сопоставления с фото (M2); CLIP обучался на английских подписях",
+    "coco_classes": "классы детектора COCO, подтверждающие категорию в видео (M4); пусто — категория видеомодулем не проверяется",
+    "eval_source_class": "класс тестового датасета Imagenette, если категория в нём представлена"
+  },
+  "categories": {
+    "Рыбалка и улов": {
+      "clip_prompts": ["a tench fish", "a freshwater fish held by a fisherman", "a caught fish"],
+      "coco_classes": [],
+      "eval_source_class": "tench"
+    },
+    "Животные: собаки": {
+      "clip_prompts": ["an English springer spaniel dog", "a spaniel dog", "a pet dog"],
+      "coco_classes": ["dog"],
+      "eval_source_class": "English springer"
+    },
+    "Ретро-электроника": {
+      "clip_prompts": ["a cassette player", "a portable tape recorder", "a vintage audio player"],
+      "coco_classes": [],
+      "eval_source_class": "cassette player"
+    },
+    "Инструменты: бензопилы": {
+      "clip_prompts": ["a chainsaw", "a gas powered chain saw", "a power saw tool"],
+      "coco_classes": [],
+      "eval_source_class": "chain saw"
+    },
+    "Недвижимость: здания": {
+      "clip_prompts": ["a church building", "a cathedral exterior", "an old stone church"],
+      "coco_classes": [],
+      "eval_source_class": "church"
+    },
+    "Музыкальные инструменты": {
+      "clip_prompts": ["a French horn", "a brass horn instrument", "a coiled brass instrument"],
+      "coco_classes": [],
+      "eval_source_class": "French horn"
+    },
+    "Спецтехника": {
+      "clip_prompts": ["a garbage truck", "a refuse collection vehicle", "a municipal waste truck"],
+      "coco_classes": ["truck"],
+      "eval_source_class": "garbage truck"
+    },
+    "Оборудование для АЗС": {
+      "clip_prompts": ["a gas pump", "a fuel dispenser at a gas station", "a petrol pump"],
+      "coco_classes": [],
+      "eval_source_class": "gas pump"
+    },
+    "Спорт: мячи": {
+      "clip_prompts": ["a golf ball", "a white dimpled golf ball", "a golf ball on a tee"],
+      "coco_classes": ["sports ball"],
+      "eval_source_class": "golf ball"
+    },
+    "Экстремальный спорт": {
+      "clip_prompts": ["a parachute", "a parachute canopy in the sky", "a skydiver with a parachute"],
+      "coco_classes": [],
+      "eval_source_class": "parachute"
+    },
+    "Велосипеды": {
+      "clip_prompts": ["a bicycle", "a mountain bike", "a bike leaning on a wall"],
+      "coco_classes": ["bicycle"],
+      "eval_source_class": null
+    },
+    "Автомобили": {
+      "clip_prompts": ["a car", "a passenger car parked outside", "a sedan automobile"],
+      "coco_classes": ["car", "bus"],
+      "eval_source_class": null
+    },
+    "Мотоциклы": {
+      "clip_prompts": ["a motorcycle", "a parked motorbike", "a sport motorcycle"],
+      "coco_classes": ["motorcycle"],
+      "eval_source_class": null
+    },
+    "Мебель: диваны и кресла": {
+      "clip_prompts": ["a sofa", "an armchair in a living room", "an upholstered couch"],
+      "coco_classes": ["couch", "chair"],
+      "eval_source_class": null
+    },
+    "Мебель: столы": {
+      "clip_prompts": ["a dining table", "a wooden desk", "a kitchen table"],
+      "coco_classes": ["dining table"],
+      "eval_source_class": null
+    },
+    "Техника: ноутбуки": {
+      "clip_prompts": ["a laptop computer", "an open notebook computer", "a laptop on a desk"],
+      "coco_classes": ["laptop"],
+      "eval_source_class": null
+    },
+    "Техника: телевизоры": {
+      "clip_prompts": ["a television set", "a flat screen tv", "a tv on a stand"],
+      "coco_classes": ["tv"],
+      "eval_source_class": null
+    },
+    "Техника: телефоны": {
+      "clip_prompts": ["a smartphone", "a mobile phone", "a cell phone in a hand"],
+      "coco_classes": ["cell phone"],
+      "eval_source_class": null
+    },
+    "Бытовая техника": {
+      "clip_prompts": ["a refrigerator", "a microwave oven", "a kitchen appliance"],
+      "coco_classes": ["refrigerator", "microwave", "oven", "toaster", "sink"],
+      "eval_source_class": null
+    },
+    "Животные: кошки": {
+      "clip_prompts": ["a cat", "a domestic cat sitting", "a kitten"],
+      "coco_classes": ["cat"],
+      "eval_source_class": null
+    },
+    "Сумки и чемоданы": {
+      "clip_prompts": ["a suitcase", "a backpack", "a travel bag"],
+      "coco_classes": ["suitcase", "backpack", "handbag"],
+      "eval_source_class": null
+    },
+    "Книги": {
+      "clip_prompts": ["a stack of books", "a book cover", "books on a shelf"],
+      "coco_classes": ["book"],
+      "eval_source_class": null
+    },
+    "Растения": {
+      "clip_prompts": ["a potted plant", "a houseplant in a pot", "an indoor plant"],
+      "coco_classes": ["potted plant"],
+      "eval_source_class": null
+    }
+  },
+  "_distractors_comment": "Типовые непригодные вложения. Их нет в тестовом датасете: нужны, чтобы проверить, что фото товара не уезжает в посторонний класс.",
+  "distractors": {
+    "Скриншот экрана": {
+      "clip_prompts": ["a screenshot of a computer screen", "a screenshot of a phone app", "a user interface screenshot"]
+    },
+    "Документ или бумага": {
+      "clip_prompts": ["a scanned document", "a sheet of paper with text", "a photo of a printed page"]
+    },
+    "Люди (селфи, портрет)": {
+      "clip_prompts": ["a selfie of a person", "a portrait photo of a human face", "a group photo of people"]
+    }
+  }
+}

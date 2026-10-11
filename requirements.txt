@@ -1,0 +1,39 @@
+# Прямые зависимости с версиями, на которых получены метрики отчёта (report/docx).
+# Полный слепок окружения, включая транзитивные пакеты — requirements.lock.txt
+# Python 3.12, macOS arm64.
+# --- ядро ---
+torch==2.14.0
+torchvision==0.29.0
+numpy==2.5.3
+pillow==12.3.0
+
+# --- M1: текст (Hugging Face) ---
+transformers==5.17.0
+huggingface_hub==1.32.0
+
+# --- M3: аудио (faster-whisper / CTranslate2) ---
+faster-whisper==1.2.1
+jiwer==4.0.0
+
+# --- M4: видео (Ultralytics) ---
+ultralytics==8.4.155
+opencv-python==5.0.0.93
+
+# --- метрики и данные ---
+scikit-learn==1.9.1
+pandas==3.0.5
+matplotlib==3.11.2
+datasets==5.0.1
+tqdm==4.70.1
+
+# --- инфраструктура ---
+psutil==7.2.2
+requests==2.34.2
+
+# --- API (задел на следующий этап) ---
+fastapi==0.141.1
+uvicorn==0.53.0
+httpx==0.28.1        # TestClient в m1_text/bench_api.py
+
+# --- отчёт ---
+python-docx==1.2.0

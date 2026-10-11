@@ -1,0 +1,237 @@
+{
+  "model": "s-nlp/russian_toxicity_classifier",
+  "dataset": "m1_text/data/samples.csv",
+  "n_samples": 200,
+  "original_positive_rate": 0.5,
+  "positive_rate": 0.5,
+  "roc_auc": 0.9433,
+  "pr_auc": 0.9521,
+  "thresholds": {
+    "review": 0.0019,
+    "reject": 0.1372,
+    "target_precision": 0.95,
+    "target_recall": 0.95,
+    "assumed_violation_rate": 0.05,
+    "observed_violation_rate": 0.5,
+    "expected_precision_at_rate": 1.0,
+    "expected_recall_at_rate": 0.56
+  },
+  "buckets": {
+    "share_allow": 0.35,
+    "share_review": 0.375,
+    "share_reject": 0.275,
+    "automated_share": 0.625,
+    "precision_reject": 1.0,
+    "recall_reject": 0.55,
+    "violations_leaked_to_allow": 0.04,
+    "clean_wrongly_rejected": 0.0
+  },
+  "performance": {
+    "name": "m1_eval_russian_toxicity_classifier",
+    "device": "cpu",
+    "n_calls": 7,
+    "total_s": 0.399,
+    "latency_ms": {
+      "mean": 56.79,
+      "p50": 57.41,
+      "p95": 84.19,
+      "max": 84.19
+    },
+    "throughput_per_s": 17.56,
+    "memory_mb": {
+      "rss_start": 482.0,
+      "rss_peak": 893.3,
+      "rss_delta": 411.2,
+      "gpu_allocated": 0.0
+    },
+    "env": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.14"
+    },
+    "model": "s-nlp/russian_toxicity_classifier",
+    "batch_size": 32
+  },
+  "recall_sweep": [
+    {
+      "target_recall": 0.95,
+      "thresholds": {
+        "review": 0.0019,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.95,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.35,
+        "share_review": 0.375,
+        "share_reject": 0.275,
+        "automated_share": 0.625,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.04,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.85,
+      "thresholds": {
+        "review": 0.005,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.85,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.53,
+        "share_review": 0.195,
+        "share_reject": 0.275,
+        "automated_share": 0.805,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.15,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.75,
+      "thresholds": {
+        "review": 0.008,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.75,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.595,
+        "share_review": 0.13,
+        "share_reject": 0.275,
+        "automated_share": 0.87,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.23,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.65,
+      "thresholds": {
+        "review": 0.0255,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.65,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.66,
+        "share_review": 0.065,
+        "share_reject": 0.275,
+        "automated_share": 0.935,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.33,
+        "clean_wrongly_rejected": 0.0
+      }
+    },
+    {
+      "target_recall": 0.55,
+      "thresholds": {
+        "review": 0.1372,
+        "reject": 0.1372,
+        "target_precision": 0.95,
+        "target_recall": 0.55,
+        "assumed_violation_rate": 0.05,
+        "observed_violation_rate": 0.5,
+        "expected_precision_at_rate": 1.0,
+        "expected_recall_at_rate": 0.56
+      },
+      "buckets": {
+        "share_allow": 0.725,
+        "share_review": 0.0,
+        "share_reject": 0.275,
+        "automated_share": 1.0,
+        "precision_reject": 1.0,
+        "recall_reject": 0.55,
+        "violations_leaked_to_allow": 0.45,
+        "clean_wrongly_rejected": 0.0
+      }
+    }
+  ],
+  "by_kind": {
+    "borderline": {
+      "label": 1,
+      "n": 20,
+      "median_score": 0.0535,
+      "reject": 7,
+      "review": 13,
+      "allow": 0,
+      "share_rejected": 0.35
+    },
+    "contempt": {
+      "label": 1,
+      "n": 25,
+      "median_score": 0.006,
+      "reject": 3,
+      "review": 18,
+      "allow": 4,
+      "share_rejected": 0.12
+    },
+    "firm": {
+      "label": 0,
+      "n": 30,
+      "median_score": 0.0018,
+      "reject": 0,
+      "review": 15,
+      "allow": 15,
+      "share_rejected": 0.0
+    },
+    "insult": {
+      "label": 1,
+      "n": 40,
+      "median_score": 0.9542,
+      "reject": 40,
+      "review": 0,
+      "allow": 0,
+      "share_rejected": 1.0
+    },
+    "negative": {
+      "label": 0,
+      "n": 15,
+      "median_score": 0.0031,
+      "reject": 0,
+      "review": 10,
+      "allow": 5,
+      "share_rejected": 0.0
+    },
+    "plain": {
+      "label": 0,
+      "n": 55,
+      "median_score": 0.0011,
+      "reject": 0,
+      "review": 9,
+      "allow": 46,
+      "share_rejected": 0.0
+    },
+    "threat": {
+      "label": 1,
+      "n": 15,
+      "median_score": 0.0119,
+      "reject": 5,
+      "review": 10,
+      "allow": 0,
+      "share_rejected": 0.3333
+    }
+  }
+}

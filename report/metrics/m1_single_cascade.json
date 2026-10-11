@@ -1,0 +1,27 @@
+{
+  "name": "m1_single_cascade",
+  "device": "cpu",
+  "n_calls": 300,
+  "total_s": 6.079,
+  "latency_ms": {
+    "mean": 20.12,
+    "p50": 13.3,
+    "p95": 19.28,
+    "max": 1832.81
+  },
+  "throughput_per_s": 49.35,
+  "memory_mb": {
+    "rss_start": 818.4,
+    "rss_peak": 917.9,
+    "rss_delta": 99.5,
+    "gpu_allocated": 0.0
+  },
+  "env": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.14"
+  },
+  "mode": "каскад: решение + объяснение",
+  "decision_model": "s-nlp/russian_toxicity_classifier",
+  "explain_model": "cointegrated/rubert-tiny-toxicity"
+}

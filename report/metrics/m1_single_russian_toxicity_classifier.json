@@ -1,0 +1,26 @@
+{
+  "name": "m1_single_russian_toxicity_classifier",
+  "device": "cpu",
+  "n_calls": 300,
+  "total_s": 4.193,
+  "latency_ms": {
+    "mean": 13.84,
+    "p50": 12.79,
+    "p95": 20.09,
+    "max": 35.0
+  },
+  "throughput_per_s": 71.54,
+  "memory_mb": {
+    "rss_start": 841.8,
+    "rss_peak": 902.5,
+    "rss_delta": 60.7,
+    "gpu_allocated": 0.0
+  },
+  "env": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.14"
+  },
+  "model": "s-nlp/russian_toxicity_classifier",
+  "mode": "по одному тексту, как в API"
+}

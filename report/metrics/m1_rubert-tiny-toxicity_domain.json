@@ -1,0 +1,124 @@
+{
+  "model": "cointegrated/rubert-tiny-toxicity",
+  "dataset": "m1_text/data/samples.csv",
+  "n_samples": 200,
+  "original_positive_rate": 0.5,
+  "positive_rate": 0.5,
+  "roc_auc": 0.8148,
+  "pr_auc": 0.8225,
+  "thresholds": {
+    "review": 0.81,
+    "reject": 0.9874,
+    "target_precision": 0.95,
+    "target_recall": 0.95,
+    "fitted_on": {
+      "dataset": "m1_text/data/public_test.csv",
+      "model": "cointegrated/rubert-tiny-toxicity",
+      "n_samples": 5228,
+      "positive_rate": 0.0499,
+      "date": "2026-09-18"
+    },
+    "_warning": "Пороги не переносятся между доменами. Перед эксплуатацией перекалибруйте на размеченных данных целевого домена: с порогами, подобранными на форумных комментариях, на объявлениях просачивается 53% нарушений."
+  },
+  "buckets": {
+    "share_allow": 0.92,
+    "share_review": 0.035,
+    "share_reject": 0.045,
+    "automated_share": 0.965,
+    "precision_reject": 1.0,
+    "recall_reject": 0.09,
+    "violations_leaked_to_allow": 0.85,
+    "clean_wrongly_rejected": 0.0
+  },
+  "performance": {
+    "name": "m1_eval_rubert-tiny-toxicity",
+    "device": "cpu",
+    "n_calls": 7,
+    "total_s": 0.085,
+    "latency_ms": {
+      "mean": 12.04,
+      "p50": 8.5,
+      "p95": 34.87,
+      "max": 34.87
+    },
+    "throughput_per_s": 82.39,
+    "memory_mb": {
+      "rss_start": 482.7,
+      "rss_peak": 532.4,
+      "rss_delta": 49.7,
+      "gpu_allocated": 0.0
+    },
+    "env": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.14"
+    },
+    "model": "cointegrated/rubert-tiny-toxicity",
+    "batch_size": 32
+  },
+  "by_kind": {
+    "borderline": {
+      "label": 1,
+      "n": 20,
+      "median_score": 0.0006,
+      "reject": 0,
+      "review": 0,
+      "allow": 20,
+      "share_rejected": 0.0
+    },
+    "contempt": {
+      "label": 1,
+      "n": 25,
+      "median_score": 0.0003,
+      "reject": 0,
+      "review": 0,
+      "allow": 25,
+      "share_rejected": 0.0
+    },
+    "firm": {
+      "label": 0,
+      "n": 30,
+      "median_score": 0.0002,
+      "reject": 0,
+      "review": 0,
+      "allow": 30,
+      "share_rejected": 0.0
+    },
+    "insult": {
+      "label": 1,
+      "n": 40,
+      "median_score": 0.5671,
+      "reject": 9,
+      "review": 6,
+      "allow": 25,
+      "share_rejected": 0.225
+    },
+    "negative": {
+      "label": 0,
+      "n": 15,
+      "median_score": 0.0005,
+      "reject": 0,
+      "review": 0,
+      "allow": 15,
+      "share_rejected": 0.0
+    },
+    "plain": {
+      "label": 0,
+      "n": 55,
+      "median_score": 0.0002,
+      "reject": 0,
+      "review": 1,
+      "allow": 54,
+      "share_rejected": 0.0
+    },
+    "threat": {
+      "label": 1,
+      "n": 15,
+      "median_score": 0.0005,
+      "reject": 0,
+      "review": 0,
+      "allow": 15,
+      "share_rejected": 0.0
+    }
+  }
+}

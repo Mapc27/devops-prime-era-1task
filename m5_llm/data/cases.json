@@ -1,0 +1,364 @@
+[
+  {
+    "name": "всё чисто",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "allow"
+  },
+  {
+    "name": "m1_text: review",
+    "checks": {
+      "m1_text": {
+        "decision": "review",
+        "toxicity": 0.61,
+        "top_violation_ru": "оскорбление",
+        "reason": "пограничная формулировка в описании"
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "m1_text: reject",
+    "checks": {
+      "m1_text": {
+        "decision": "reject",
+        "toxicity": 0.99,
+        "top_violation_ru": "нецензурная лексика",
+        "reason": "в описании нецензурная лексика"
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "m2_image: review",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "review",
+        "match": false,
+        "reason": "модель не уверена в содержимом фотографии"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "m2_image: reject",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "reject",
+        "match": false,
+        "reason": "на фото распознано «Скриншот экрана», а заявлена категория «Техника: ноутбуки»"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "m3_audio: review",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "review",
+        "reason": "низкое качество записи"
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "m3_audio: reject",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "reject",
+        "top_violation_ru": "угроза",
+        "reason": "в голосовом сообщении угроза покупателю"
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "m4_video: review",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m2_image": {
+        "decision": "allow",
+        "match": true,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "review",
+        "declared_present": false,
+        "reason": "в ролике не найден объект заявленной категории"
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "текст:review + фото:review",
+    "checks": {
+      "m1_text": {
+        "decision": "review",
+        "toxicity": 0.61,
+        "top_violation_ru": "оскорбление",
+        "reason": "пограничная формулировка в описании"
+      },
+      "m2_image": {
+        "decision": "review",
+        "match": false,
+        "reason": "модель не уверена в содержимом фотографии"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "текст:review + фото:reject",
+    "checks": {
+      "m1_text": {
+        "decision": "review",
+        "toxicity": 0.61,
+        "top_violation_ru": "оскорбление",
+        "reason": "пограничная формулировка в описании"
+      },
+      "m2_image": {
+        "decision": "reject",
+        "match": false,
+        "reason": "на фото распознано «Скриншот экрана», а заявлена категория «Техника: ноутбуки»"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "текст:reject + фото:review",
+    "checks": {
+      "m1_text": {
+        "decision": "reject",
+        "toxicity": 0.99,
+        "top_violation_ru": "нецензурная лексика",
+        "reason": "в описании нецензурная лексика"
+      },
+      "m2_image": {
+        "decision": "review",
+        "match": false,
+        "reason": "модель не уверена в содержимом фотографии"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "текст:reject + фото:reject",
+    "checks": {
+      "m1_text": {
+        "decision": "reject",
+        "toxicity": 0.99,
+        "top_violation_ru": "нецензурная лексика",
+        "reason": "в описании нецензурная лексика"
+      },
+      "m2_image": {
+        "decision": "reject",
+        "match": false,
+        "reason": "на фото распознано «Скриншот экрана», а заявлена категория «Техника: ноутбуки»"
+      },
+      "m3_audio": {
+        "decision": "allow",
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "allow",
+        "declared_present": true,
+        "reason": null
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "только текст, чисто",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      }
+    },
+    "expected_verdict": "allow"
+  },
+  {
+    "name": "только текст, нарушение",
+    "checks": {
+      "m1_text": {
+        "decision": "reject",
+        "toxicity": 0.99,
+        "top_violation_ru": "нецензурная лексика",
+        "reason": "в описании нецензурная лексика"
+      }
+    },
+    "expected_verdict": "reject"
+  },
+  {
+    "name": "текст чист, видео не подтвердило товар",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m4_video": {
+        "decision": "review",
+        "declared_present": false,
+        "reason": "в ролике не найден объект заявленной категории"
+      }
+    },
+    "expected_verdict": "review"
+  },
+  {
+    "name": "голосовое с угрозой, остальное чисто",
+    "checks": {
+      "m1_text": {
+        "decision": "allow",
+        "toxicity": 0.01,
+        "reason": null
+      },
+      "m3_audio": {
+        "decision": "reject",
+        "top_violation_ru": "угроза",
+        "reason": "в голосовом сообщении угроза покупателю"
+      }
+    },
+    "expected_verdict": "reject"
+  }
+]

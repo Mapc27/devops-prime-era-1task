@@ -1,0 +1,14 @@
+{
+  "noisy10": {
+    "n": 15,
+    "snr_db_mean": 6.7,
+    "snr_db_min": 5.8,
+    "snr_db_max": 7.7
+  },
+  "noisy15": {
+    "n": 15,
+    "snr_db_mean": 12.7,
+    "snr_db_min": 11.8,
+    "snr_db_max": 13.7
+  }
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "model": "whisper-tiny",
+    "compute_type": "int8",
+    "load_s": 0.47,
+    "load_rss_mb": 189.2,
+    "conditions": {
+      "clean": {
+        "n": 15,
+        "wer": 0.2323,
+        "cer": 0.0439,
+        "rtf_mean": 0.059,
+        "verdict_agreement": 0.9333
+      },
+      "noisy10": {
+        "n": 15,
+        "wer": 0.8,
+        "cer": 0.3609,
+        "rtf_mean": 0.186,
+        "verdict_agreement": 0.7333
+      },
+      "noisy15": {
+        "n": 15,
+        "wer": 0.5806,
+        "cer": 0.2203,
+        "rtf_mean": 0.059,
+        "verdict_agreement": 0.8
+      }
+    },
+    "verdict_mismatches": [
+      {
+        "audio": "09_noisy15.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Не звоните мне идиоты, в объявлении всё написано русским языком",
+        "transcription": "И в анитемии йоты в объявлении все на кисы на русскими дипом."
+      },
+      {
+        "audio": "09_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Не звоните мне идиоты, в объявлении всё написано русским языком",
+        "transcription": "Невоните меня, Готов, в объявии, и все на Кинтоноросскими запомнят."
+      },
+      {
+        "audio": "10_clean.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупщики тут и бараны, продают только в нормальной руки."
+      },
+      {
+        "audio": "10_noisy15.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупчики к этой бараме, продаю только в нормальной руки."
+      },
+      {
+        "audio": "10_noisy10.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Смитрий Кокщикикин Бараны, проданитой в нормальной роде."
+      },
+      {
+        "audio": "11_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Кто будет торговаться, тот полный придурок, цена окончательная",
+        "transcription": "что будет пергаваться, что по унитрибурок, и на этом чайке меня."
+      },
+      {
+        "audio": "12_noisy15.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Достали уже дебилы со своими глупыми вопросами, читайте описание",
+        "transcription": "До встречи, сделайся свои дуты, вопросыми, читайте о писаниях."
+      },
+      {
+        "audio": "12_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Достали уже дебилы со своими глупыми вопросами, читайте описание",
+        "transcription": "До встречи делайте свои идут и вопросыми, читайте эти сами."
+      }
+    ]
+  },
+  {
+    "model": "whisper-base",
+    "compute_type": "int8",
+    "load_s": 1.53,
+    "load_rss_mb": 209.3,
+    "conditions": {
+      "clean": {
+        "n": 15,
+        "wer": 0.1548,
+        "cer": 0.0259,
+        "rtf_mean": 0.097,
+        "verdict_agreement": 0.9333
+      },
+      "noisy10": {
+        "n": 15,
+        "wer": 0.5871,
+        "cer": 0.2582,
+        "rtf_mean": 0.135,
+        "verdict_agreement": 0.7333
+      },
+      "noisy15": {
+        "n": 15,
+        "wer": 0.2968,
+        "cer": 0.0798,
+        "rtf_mean": 0.097,
+        "verdict_agreement": 0.8
+      }
+    },
+    "verdict_mismatches": [
+      {
+        "audio": "09_noisy15.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Не звоните мне идиоты, в объявлении всё написано русским языком",
+        "transcription": "не звоните, не идёты, в объявлении всё написано русский языком."
+      },
+      {
+        "audio": "09_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Не звоните мне идиоты, в объявлении всё написано русским языком",
+        "transcription": "Не вонит и не годы, в объявлении все на пинском родстве языком."
+      },
+      {
+        "audio": "10_clean.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупчики тупые бараны, продают только в нормальной руки."
+      },
+      {
+        "audio": "10_noisy15.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупчики-то и бараны продают только в нормальной руки."
+      },
+      {
+        "audio": "10_noisy10.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все предпочитивные бараны продаются в нормальные руки."
+      },
+      {
+        "audio": "11_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Кто будет торговаться, тот полный придурок, цена окончательная",
+        "transcription": "Собудить кардаваться, кто по унитридурок, и на икончательнее."
+      },
+      {
+        "audio": "12_noisy15.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Достали уже дебилы со своими глупыми вопросами, читайте описание",
+        "transcription": "Достали уже делайся своими глупыми вопросами, читайте описание."
+      },
+      {
+        "audio": "12_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Достали уже дебилы со своими глупыми вопросами, читайте описание",
+        "transcription": "Достали уже добивище своими дотами, вопросами, читайте описание."
+      }
+    ]
+  },
+  {
+    "model": "whisper-small",
+    "compute_type": "int8",
+    "load_s": 3.71,
+    "load_rss_mb": 514.5,
+    "conditions": {
+      "clean": {
+        "n": 15,
+        "wer": 0.0645,
+        "cer": 0.016,
+        "rtf_mean": 0.267,
+        "verdict_agreement": 0.9333
+      },
+      "noisy10": {
+        "n": 15,
+        "wer": 0.4065,
+        "cer": 0.1346,
+        "rtf_mean": 0.267,
+        "verdict_agreement": 0.8
+      },
+      "noisy15": {
+        "n": 15,
+        "wer": 0.1935,
+        "cer": 0.0479,
+        "rtf_mean": 0.264,
+        "verdict_agreement": 0.9333
+      }
+    },
+    "verdict_mismatches": [
+      {
+        "audio": "09_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Не звоните мне идиоты, в объявлении всё написано русским языком",
+        "transcription": "Незвонительный геотез, в объявлении в санокисном русском языком."
+      },
+      {
+        "audio": "10_clean.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупщики тупые бараны, продают только в нормальной руки."
+      },
+      {
+        "audio": "10_noisy15.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "Все перекупчики-путые бараны, продают только в нормальной руке."
+      },
+      {
+        "audio": "10_noisy10.wav",
+        "expected": "review",
+        "got": "allow",
+        "reference": "Все перекупщики тупые бараны, продаю только в нормальные руки",
+        "transcription": "все переклубщики-пятые бараны продают только в нормальной руке."
+      },
+      {
+        "audio": "11_noisy10.wav",
+        "expected": "reject",
+        "got": "allow",
+        "reference": "Кто будет торговаться, тот полный придурок, цена окончательная",
+        "transcription": "что будет торговаться, то полный приборок, то она окончательная."
+      }
+    ]
+  }
+]

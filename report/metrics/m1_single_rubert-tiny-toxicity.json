@@ -1,0 +1,26 @@
+{
+  "name": "m1_single_rubert-tiny-toxicity",
+  "device": "cpu",
+  "n_calls": 300,
+  "total_s": 0.428,
+  "latency_ms": {
+    "mean": 1.38,
+    "p50": 1.09,
+    "p95": 3.28,
+    "max": 5.35
+  },
+  "throughput_per_s": 701.04,
+  "memory_mb": {
+    "rss_start": 495.1,
+    "rss_peak": 520.8,
+    "rss_delta": 25.7,
+    "gpu_allocated": 0.0
+  },
+  "env": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.14"
+  },
+  "model": "cointegrated/rubert-tiny-toxicity",
+  "mode": "по одному тексту, как в API"
+}

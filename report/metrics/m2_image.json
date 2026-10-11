@@ -1,0 +1,170 @@
+{
+  "dataset": "m2_image/data/imagenette_val",
+  "n_samples": 500,
+  "device": "mps",
+  "batch_size": 16,
+  "match_threshold": 0.5,
+  "clip_without_distractors": {
+    "top1_accuracy": 0.97,
+    "top3_accuracy": 0.998,
+    "performance": {
+      "name": "m2_clip_nodis",
+      "device": "mps",
+      "n_calls": 32,
+      "total_s": 1.855,
+      "latency_ms": {
+        "mean": 57.81,
+        "p50": 57.48,
+        "p95": 62.51,
+        "max": 85.37
+      },
+      "throughput_per_s": 17.25,
+      "memory_mb": {
+        "rss_start": 1602.9,
+        "rss_peak": 1652.8,
+        "rss_delta": 49.8,
+        "gpu_allocated": 578.6
+      },
+      "env": {
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.12.14"
+      },
+      "model": "openai/clip-vit-base-patch32",
+      "batch": 16
+    }
+  },
+  "clip_with_distractors": {
+    "top1_accuracy": 0.966,
+    "top3_accuracy": 0.998,
+    "performance": {
+      "name": "m2_clip_dis",
+      "device": "mps",
+      "n_calls": 32,
+      "total_s": 1.819,
+      "latency_ms": {
+        "mean": 56.67,
+        "p50": 57.11,
+        "p95": 62.7,
+        "max": 71.48
+      },
+      "throughput_per_s": 17.6,
+      "memory_mb": {
+        "rss_start": 1659.4,
+        "rss_peak": 1661.9,
+        "rss_delta": 2.5,
+        "gpu_allocated": 580.2
+      },
+      "env": {
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.12.14"
+      },
+      "model": "openai/clip-vit-base-patch32",
+      "batch": 16
+    }
+  },
+  "resnet50_supervised": {
+    "top1_accuracy": 0.998,
+    "performance": {
+      "name": "m2_resnet50",
+      "device": "mps",
+      "n_calls": 32,
+      "total_s": 2.081,
+      "latency_ms": {
+        "mean": 64.87,
+        "p50": 62.92,
+        "p95": 69.45,
+        "max": 103.42
+      },
+      "throughput_per_s": 15.38,
+      "memory_mb": {
+        "rss_start": 1788.8,
+        "rss_peak": 1852.8,
+        "rss_delta": 64.0,
+        "gpu_allocated": 678.5
+      },
+      "env": {
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.12.14"
+      },
+      "batch": 16
+    }
+  },
+  "mismatch_detection": {
+    "honest": {
+      "allow": 0.96,
+      "review": 0.016,
+      "reject": 0.024
+    },
+    "swapped": {
+      "allow": 0.002,
+      "review": 0.016,
+      "reject": 0.982
+    },
+    "recall_mismatch": 0.998,
+    "recall_mismatch_reject": 0.982,
+    "precision_reject": 0.9761,
+    "false_reject_rate": 0.024,
+    "honest_to_review": 0.016,
+    "note": "honest — честные объявления, swapped — подменённая категория; доли корзин считаются от числа изображений"
+  },
+  "perf_sweep": {
+    "mps": {
+      "1": {
+        "ms_per_image": 8.98,
+        "images_per_s": 111.4,
+        "latency_ms_per_batch_p50": 8.72,
+        "gpu_allocated_mb": 1260.9
+      },
+      "4": {
+        "ms_per_image": 4.97,
+        "images_per_s": 201.3,
+        "latency_ms_per_batch_p50": 19.38,
+        "gpu_allocated_mb": 1260.9
+      },
+      "16": {
+        "ms_per_image": 3.62,
+        "images_per_s": 276.5,
+        "latency_ms_per_batch_p50": 57.3,
+        "gpu_allocated_mb": 1260.9
+      },
+      "32": {
+        "ms_per_image": 3.41,
+        "images_per_s": 292.9,
+        "latency_ms_per_batch_p50": 109.0,
+        "gpu_allocated_mb": 1260.9
+      }
+    },
+    "cpu": {
+      "1": {
+        "ms_per_image": 18.69,
+        "images_per_s": 53.5,
+        "latency_ms_per_batch_p50": 18.46,
+        "gpu_allocated_mb": 678.5
+      },
+      "4": {
+        "ms_per_image": 8.37,
+        "images_per_s": 119.5,
+        "latency_ms_per_batch_p50": 32.91,
+        "gpu_allocated_mb": 678.5
+      },
+      "16": {
+        "ms_per_image": 5.62,
+        "images_per_s": 177.8,
+        "latency_ms_per_batch_p50": 90.04,
+        "gpu_allocated_mb": 678.5
+      },
+      "32": {
+        "ms_per_image": 5.12,
+        "images_per_s": 195.1,
+        "latency_ms_per_batch_p50": 163.65,
+        "gpu_allocated_mb": 678.5
+      }
+    },
+    "speedup": {
+      "mps_vs_cpu_at_batch_32": 1.5
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "review": 0.005,
+  "reject": 0.1372,
+  "target_precision": 0.95,
+  "target_recall": 0.85,
+  "assumed_violation_rate": 0.05,
+  "observed_violation_rate": 0.5,
+  "expected_precision_at_rate": 1.0,
+  "expected_recall_at_rate": 0.56,
+  "fitted_on": {
+    "dataset": "m1_text/data/samples.csv",
+    "model": "s-nlp/russian_toxicity_classifier",
+    "n_samples": 200,
+    "positive_rate": 0.5,
+    "date": "2026-10-11"
+  },
+  "_warning": "Пороги не переносятся между доменами. Перед эксплуатацией перекалибруйте на размеченных данных целевого домена: пороги, подобранные на форумных комментариях, на объявлениях пропускают большую часть нарушений (см. report/metrics/m1_*_domain.json)."
+}

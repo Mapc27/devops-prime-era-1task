@@ -1,0 +1,507 @@
+{
+  "n_checks": 24,
+  "models": {
+    "yolo11n.pt": {
+      "devices": {
+        "mps": [
+          {
+            "stride": 1,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 3600,
+            "elapsed_s": 27.0,
+            "s_per_video": 1.125,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 5,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 720,
+            "elapsed_s": 5.79,
+            "s_per_video": 0.241,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 10,
+            "accuracy": 0.8333,
+            "confirm_recall": 0.6667,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.3333,
+            "frames_analyzed": 360,
+            "elapsed_s": 3.26,
+            "s_per_video": 0.136,
+            "counts": {
+              "tp": 8,
+              "fp": 0,
+              "tn": 12,
+              "fn": 4
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 3
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 15,
+            "accuracy": 0.8333,
+            "confirm_recall": 0.6667,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.3333,
+            "frames_analyzed": 240,
+            "elapsed_s": 2.62,
+            "s_per_video": 0.109,
+            "counts": {
+              "tp": 8,
+              "fp": 0,
+              "tn": 12,
+              "fn": 4
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 3
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          }
+        ],
+        "cpu": [
+          {
+            "stride": 1,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 3600,
+            "elapsed_s": 60.25,
+            "s_per_video": 2.51,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 5,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 720,
+            "elapsed_s": 12.53,
+            "s_per_video": 0.522,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 10,
+            "accuracy": 0.8333,
+            "confirm_recall": 0.6667,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.3333,
+            "frames_analyzed": 360,
+            "elapsed_s": 6.54,
+            "s_per_video": 0.272,
+            "counts": {
+              "tp": 8,
+              "fp": 0,
+              "tn": 12,
+              "fn": 4
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 3
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 15,
+            "accuracy": 0.8333,
+            "confirm_recall": 0.6667,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.3333,
+            "frames_analyzed": 240,
+            "elapsed_s": 4.67,
+            "s_per_video": 0.194,
+            "counts": {
+              "tp": 8,
+              "fp": 0,
+              "tn": 12,
+              "fn": 4
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 3
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          }
+        ]
+      },
+      "speedup": {
+        "mps_vs_cpu": 2.23
+      }
+    },
+    "yolo11s.pt": {
+      "devices": {
+        "mps": [
+          {
+            "stride": 1,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 3600,
+            "elapsed_s": 30.38,
+            "s_per_video": 1.266,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 5,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 720,
+            "elapsed_s": 6.71,
+            "s_per_video": 0.279,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 10,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 360,
+            "elapsed_s": 3.7,
+            "s_per_video": 0.154,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 15,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 240,
+            "elapsed_s": 2.87,
+            "s_per_video": 0.12,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          }
+        ],
+        "cpu": [
+          {
+            "stride": 1,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 3600,
+            "elapsed_s": 100.02,
+            "s_per_video": 4.168,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 5,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 720,
+            "elapsed_s": 20.67,
+            "s_per_video": 0.861,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 10,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 360,
+            "elapsed_s": 10.57,
+            "s_per_video": 0.44,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          },
+          {
+            "stride": 15,
+            "accuracy": 0.875,
+            "confirm_recall": 0.75,
+            "mismatch_recall": 1.0,
+            "false_reject_rate": 0.25,
+            "frames_analyzed": 240,
+            "elapsed_s": 7.47,
+            "s_per_video": 0.311,
+            "counts": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 12,
+              "fn": 3
+            },
+            "per_category": {
+              "Животные: собаки": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спецтехника": {
+                "videos": 4,
+                "confirmed": 4
+              },
+              "Спорт: мячи": {
+                "videos": 4,
+                "confirmed": 1
+              }
+            }
+          }
+        ]
+      },
+      "speedup": {
+        "mps_vs_cpu": 3.29
+      }
+    }
+  }
+}

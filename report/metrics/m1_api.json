@@ -1,0 +1,31 @@
+{
+  "name": "m1_api",
+  "device": "cpu",
+  "n_calls": 300,
+  "total_s": 4.839,
+  "latency_ms": {
+    "mean": 15.98,
+    "p50": 15.64,
+    "p95": 17.8,
+    "max": 21.89
+  },
+  "throughput_per_s": 61.99,
+  "memory_mb": {
+    "rss_start": 857.6,
+    "rss_peak": 898.9,
+    "rss_delta": 41.3,
+    "gpu_allocated": 0.0
+  },
+  "env": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.14"
+  },
+  "mode": "HTTP POST /predict, TestClient",
+  "startup_s": 9.41,
+  "decisions": {
+    "allow": 197,
+    "review": 48,
+    "reject": 55
+  }
+}

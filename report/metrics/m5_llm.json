@@ -1,0 +1,126 @@
+[
+  {
+    "model": "qwen2.5:7b-instruct",
+    "n_cases": 48,
+    "repeats": 3,
+    "valid_json_rate": 1.0,
+    "verdict_agreement": 0.8125,
+    "mismatches": [
+      {
+        "case": "текст:review + фото:reject",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "текст:reject + фото:review",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "только текст, чисто",
+        "expected": "allow",
+        "got": "review"
+      },
+      {
+        "case": "текст:review + фото:reject",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "текст:reject + фото:review",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "только текст, чисто",
+        "expected": "allow",
+        "got": "review"
+      },
+      {
+        "case": "текст:review + фото:reject",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "текст:reject + фото:review",
+        "expected": "reject",
+        "got": "review"
+      },
+      {
+        "case": "только текст, чисто",
+        "expected": "allow",
+        "got": "review"
+      }
+    ],
+    "clean_text_rate": 1.0,
+    "text_issues": {},
+    "text_defects": [],
+    "generation_tps": {
+      "mean": 44.4,
+      "min": 39.9,
+      "max": 46.8
+    },
+    "prompt_tps_mean": 1375.6,
+    "response_s": {
+      "mean": 2.86,
+      "p95": 3.89
+    },
+    "memory": {
+      "model_mb": 4521.1,
+      "vram_mb": 4521.1,
+      "loaded_models": 1,
+      "runner_rss_mb": 4929.5
+    }
+  },
+  {
+    "model": "qwen2.5:3b-instruct",
+    "n_cases": 48,
+    "repeats": 3,
+    "valid_json_rate": 1.0,
+    "verdict_agreement": 1.0,
+    "mismatches": [],
+    "clean_text_rate": 0.9375,
+    "text_issues": {
+      "служебные термины": 3
+    },
+    "text_defects": [
+      {
+        "case": "m2_image: review",
+        "issues": [
+          "служебные термины"
+        ],
+        "text": "Было выявлено одно незавершенное рассмотрение (review) в отношении фотографии. Пожалуйста, уточните детали или предоставьте дополнительные фотографии для проверки."
+      },
+      {
+        "case": "m2_image: review",
+        "issues": [
+          "служебные термины"
+        ],
+        "text": "Было выявлено одно незавершенное рассмотрение (review) в отношении фотографии. Пожалуйста, уточните содержимое фотографии для дополнительного анализа."
+      },
+      {
+        "case": "только текст, чисто",
+        "issues": [
+          "служебные термины"
+        ],
+        "text": "Все проверки завершились allow. Ваш объявление можно разместить."
+      }
+    ],
+    "generation_tps": {
+      "mean": 83.4,
+      "min": 78.6,
+      "max": 87.9
+    },
+    "prompt_tps_mean": 2363.0,
+    "response_s": {
+      "mean": 1.09,
+      "p95": 1.45
+    },
+    "memory": {
+      "model_mb": 2055.3,
+      "vram_mb": 2055.3,
+      "loaded_models": 1,
+      "runner_rss_mb": 2176.8
+    }
+  }
+]
